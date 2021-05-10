@@ -536,7 +536,7 @@ int esbmc_parseoptionst::doit_k_induction_parallel()
   // Get the increment
   unsigned k_step_inc = strtoul(cmdline.getval("k-step"), nullptr, 10);
 
-  // check whether the user's parameters to run incremental verification
+  // check the user's parameters to run incremental verification
   check_step(max_k_step, k_step_inc);
 
   // All processes were created successfully
@@ -1048,7 +1048,7 @@ int esbmc_parseoptionst::doit_k_induction()
   // Get the increment
   unsigned k_step_inc = strtoul(cmdline.getval("k-step"), nullptr, 10);
 
-  // check whether the user's parameters to run incremental verification
+  // check the user's parameters to run incremental verification
   check_step(max_k_step, k_step_inc);
 
   for(BigInt k_step = 1; k_step <= max_k_step; k_step += k_step_inc)
@@ -1095,7 +1095,7 @@ int esbmc_parseoptionst::doit_falsification()
   // Get the increment
   unsigned k_step_inc = strtoul(cmdline.getval("k-step"), nullptr, 10);
 
-  // check whether the user's parameters to run incremental verification
+  // check the user's parameters to run incremental verification
   check_step(max_k_step, k_step_inc);
 
   for(BigInt k_step = 1; k_step <= max_k_step; k_step += k_step_inc)
@@ -1136,7 +1136,7 @@ int esbmc_parseoptionst::doit_incremental()
   // Get the increment
   unsigned k_step_inc = strtoul(cmdline.getval("k-step"), nullptr, 10);
 
-  // check whether the user's parameters to run incremental verification
+  // check the user's parameters to run incremental verification
   check_step(max_k_step, k_step_inc);
 
   for(BigInt k_step = 1; k_step <= max_k_step; k_step += k_step_inc)
@@ -1180,7 +1180,7 @@ int esbmc_parseoptionst::doit_termination()
   // Get the increment
   unsigned k_step_inc = strtoul(cmdline.getval("k-step"), nullptr, 10);
 
-  // check whether the user's parameters to run incremental verification
+  // check the user's parameters to run incremental verification
   check_step(max_k_step, k_step_inc);
 
   for(BigInt k_step = 1; k_step <= max_k_step; k_step += k_step_inc)
@@ -1342,7 +1342,7 @@ int esbmc_parseoptionst::do_inductive_step(
 
 void esbmc_parseoptionst::check_step(BigInt max_k_step, unsigned k_step_inc)
 {
-  // check whether the user's parameters to run incremental verification
+  // check the user's parameters to run incremental verification
   if(!cmdline.isset("unlimited-k-steps"))
   {
     if(k_step_inc >= max_k_step)
