@@ -268,12 +268,16 @@ void esbmc_parseoptionst::get_command_line_options(optionst &options)
   {
     // Get max number of iterations
 <<<<<<< HEAD
+<<<<<<< HEAD
     BigInt max_k_step = strtoul(cmdline.getval("max-k-step"), nullptr, 10);
 =======
     BigInt max_k_step = cmdline.isset("unlimited-k-steps")
                           ? UINT_MAX
                           : strtoul(cmdline.getval("max-k-step"), nullptr, 10);
 >>>>>>> 2502ea648... moved code from check_step to get_command_line_options
+=======
+    BigInt max_k_step = strtoul(cmdline.getval("max-k-step"), nullptr, 10);
+>>>>>>> 71409d92c... refactored max-k-step computation
 
     // Get the increment
     unsigned k_step_inc = strtoul(cmdline.getval("k-step"), nullptr, 10);
